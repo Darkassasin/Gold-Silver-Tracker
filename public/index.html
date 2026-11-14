@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gold & Silver Rate Tracker · Nepal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Gold &amp; silver rates</h1>
+    <p id="status" role="status">Loading rates…</p>
+  </div>
+  <button id="refresh" type="button">Refresh rates</button>
+</header>
+
+<main>
+  <section id="cards" class="cards" aria-label="Today's rate per tola"></section>
+
+  <section class="panel" aria-labelledby="trend-h">
+    <div class="panel-head">
+      <h2 id="trend-h">Last 15 days, per tola</h2>
+      <div class="seg" role="group" aria-label="Choose metal">
+        <button type="button" data-metal="gold" aria-pressed="true">Gold</button>
+        <button type="button" data-metal="silver" aria-pressed="false">Silver</button>
+      </div>
+    </div>
+    <div id="chart" data-metal="gold"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="hist-h">
+    <h2 id="hist-h">Daily history</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Gold</th><th>Change</th><th>Silver</th><th>Change</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>Rates per tola in Nepali rupees. Source: Federation of Nepal Gold and Silver Dealers' Association (FENEGOSIDA).</footer>
+<script src="app.js"></script>
+</body>
+</html>

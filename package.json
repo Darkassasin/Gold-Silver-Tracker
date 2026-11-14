@@ -1,0 +1,8 @@
+{
+  "name": "gold-silver-tracker",
+  "version": "1.0.0",
+  "description": "Nepal gold and silver rate dashboard (per tola) with 15-day history",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
